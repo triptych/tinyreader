@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPUB Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jszip.min.js"></script>
+    <script src="epub.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>EPUB Reader</h1>
+    </header>
+    <main>
+        <div id="sidebar">
+            <input type="file" id="file-input" accept=".epub">
+            <input type="text" id="url-input" placeholder="Enter EPUB URL">
+            <button id="load-url">Load from URL</button>
+            <button class="collapsible">Table of Contents</button>
+            <div class="content">
+                <ul id="toc"></ul>
+            </div>
+        </div>
+        <div id="viewer"></div>
+    </main>
+    <div id="controls">
+        <button id="toggle-sidebar">≡</button>
+        <button id="prev">Previous</button>
+        <span id="current-page"></span>
+        <button id="next">Next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
